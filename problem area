@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #d6dbd6;
+  z-index: 1;
+  position: absolute;
+  bottom: 575px;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+.active{
+color: #46813d;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #d6dbd6;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#log {
+  background-color: #add8a6;
+  float: right;
+  padding: 7px;
+  border-radius: 30px;
+  height: 33px;
+  Width: 140px;
+  top: 15px;
+  left: 450px;
+  right: 0px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url(plannen.nl);
+  background-repeat: no-repeat;
+  background-size:cover;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px black;
+  z-index: 0;
+}
+
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
+.header h1 {
+  font-size: 50px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px black;
+}
+    
+
+    b {
+      font-weight: bold;
+    }
+
+    table {
+      height: 50%;
+      border: 1px solid gray;
+    }
+
+    td {
+      text-align: center;
+      padding: 25;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 15px;
+    }
+ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+ 
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+ 
+    .footer {
+      background-color: #F1F1F1;
+      text-align: center;
+      padding: 10px;
+    }
+
+   a: link, a:visited {
+.log {
+  background-color: #add8a6;
+  float: right;
+  padding: 7px;
+  border-radius: 30px;
+  height:33px ;
+  Width: 140px ;
+  top: 15px;
+  left: 450px;
+  right: 0px;
+  position: relative;
+}
+}
+  </style>
+</head>
+ 
+<body>
+<div class="header">
+  <h1>Plannen.nl</h1>
+  <p>De website gemaakt door scholieren, voor scholieren</p>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>OVER ONS</h2>
+      <h5>De makers van Plannen.nl</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Wij zijn Noa Dupuis en Mirte de Ruiter. In de tijd dat deze website is ontworpen, zaten wij in atheneum 4. Wij hebben deze site
+            gemaakt omdat we zelf vaak moeite hebben met plannen en wij weten dat we niet de enige
+            zijn. We willen doormiddel van deze site andere leerlingen hiermee helpen. Simpelweg omdat wij weten hoe lastig het kan zijn om alles te managen.</p>
+    </div>
+     <div class="card">
+      <h2>Waarom deze site</h2>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Ken je dat moment dat je moet leren voor een toets maar je hebt geen zin? Of je moet
+            huiswerk maken maar je weet niet waar je moet beginnen? Wij hebben de perfecte site voor
+            jou! In deze site kan je zelf een planning maken in de agenda. Hier kan je je eigen afspraken
+            inplannen, toetsen, wanneer je moet beginnen met een verslag of toets, en wat je maar kan
+            verzinnen. Heb je geen zin? Of stel je het leren uit? Maak dan gebruik van de motivatie
+            pagina. Hier kan je herinneringen instellen. Als je vragen hebt kan je die aan medeleerlingen
+            stellen in het forum. Wil je het perfecte verslag maken? Of een tien halen voor je toets? Kijk
+            dan even bij Tips & Templates. Daar hebben wij een aantal tips voor je en een voorbeeld
+            verslag.</p>
+    </div>
+  <Header>
+</style>
+</head>
+<body>
+<ul>
+  <li><a id= "left" class="active" href="index.html">Home</a></li>
+  <li><a id= "left" href="Agenda.html">Agenda</a></li>
+  <li><a id= "left" href="Motivatie.html">Motivatie</a></li>
+  <li><a id= "left" href="Forum.html">Forum</a></li>
+  <li class="dropdown">
+    <a id= "left" href="javascript:void(0)" class="dropbtn">Tips & Templates</a>
+    <div class="dropdown-content">
+      <a href="Tips & Templates hw lr.html"> Tips </a>
+      <a href="Tips & Templates vs sv.html"> Templates </a>
+  <li><a id="log" href="Inloggen.html">Inloggen</a>
+    </div>
+  </li>
+</ul>
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+</body>
+</html>
+
+
