@@ -2,12 +2,24 @@
 <html>
 <head>
 <style>
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
 
-ul {
+* {
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial;
+padding: 10px;
+background: #f1f1f1;
+}
+
+.navbar ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #fff;
   border-bottom: 1px solid #d6dbd6;
   z-index: 1;
@@ -16,7 +28,7 @@ ul {
   width: 100%;
 }
 
-li {
+.navbar a{
   float: left;
 }
 
@@ -24,7 +36,7 @@ li {
 color: #46813d;
 }
 
-li a, .dropbtn {
+.navbar a, .dropbtn {
   display: inline-block;
   color: black;
   text-align: center;
@@ -34,7 +46,7 @@ li a, .dropbtn {
   font-weight: bold;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: #d6dbd6;
 }
 
@@ -79,182 +91,223 @@ li.dropdown {
   z-index: 1;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background-image: url(plannen.nl);
-  background-repeat: no-repeat;
-  background-size:cover;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px black;
-  z-index: 0;
-}
-
 /* Left column */
-.leftcolumn {   
-  float: left;
-  width: 100%;
+.leftcolumn {
+float: left;
+width: 100%;
 }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
+
+.annoying {
+	float: right;
+	position: absolute ;
+	bottom: 0px;
+	top: 100px;
+	left: 600px;
+	border: 2px solid #f1f1f1;
+	margin-bottom: 10px;
+	padding-bottom: 500px;
+	padding: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+}	
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+background-color: #faf9b2;
+width: 33.33%;
+height: max-height;
+padding-top: 10px;
+padding-bottom: 500px;
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+margin-left: 70px;
 }
-
+	
 /* Add a card effect for articles */
 .card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+background-color: white;
+padding: 20px;
+margin-top: 60px;
 }
-
+	
 /* Clear floats after the columns */
 .row::after {
-  display: table;
-  clear: both;
+content: "";
+display: table;
+clear: both;
 }
-
+	
 /* Footer */
 .footer {
-  padding: 20px;
+padding: 20px;
+text-align: center;
+background: #ddd;
+margin-top: 0px;
+}
+
+.footer a{
+	color: #858383;
+	font-style: italic;
+}
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background:#fff8a6;
   text-align: center;
-  background: #ddd;
-  margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+.month ul {
+  margin: 0;
+  padding: 0;
 }
 
-
-.header h1 {
-  font-size: 50px;
-  color: #ffffff;
-  text-shadow: 2px 2px 5px black;
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px black;
 }
-    
 
-    b {
-      font-weight: bold;
-    }
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
 
-    table {
-      height: 50%;
-      border: 1px solid gray;
-    }
-
-    td {
-      text-align: center;
-      padding: 25;
-    }
-
-    .column {
-      float: left;
-      width: 50%;
-      padding: 15px;
-    }
- 
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
- 
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-      }
-    }
- 
-    .footer {
-      background-color: #F1F1F1;
-      text-align: center;
-      padding: 10px;
-    }
-
-   a: link, a:visited {
-.log {
-  background-color: #add8a6;
+.month .next {
   float: right;
-  padding: 7px;
-  border-radius: 30px;
-  height:33px ;
-  Width: 140px ;
-  top: 15px;
-  left: 450px;
-  right: 0px;
-  position: relative;
+  padding-top: 10px;
 }
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
 }
-  </style>
-</head>
- 
-<body>
-<div class="header">
-  <h1>Plannen.nl</h1>
-  <p>De website gemaakt door scholieren, voor scholieren</p>
-</div>
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>OVER ONS</h2>
-      <h5>De makers van Plannen.nl</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Wij zijn Noa Dupuis en Mirte de Ruiter. In de tijd dat deze website is ontworpen, zaten wij in atheneum 4. Wij hebben deze site
-            gemaakt omdat we zelf vaak moeite hebben met plannen en wij weten dat we niet de enige
-            zijn. We willen doormiddel van deze site andere leerlingen hiermee helpen. Simpelweg omdat wij weten hoe lastig het kan zijn om alles te managen.</p>
-    </div>
-     <div class="card">
-      <h2>Waarom deze site</h2>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Ken je dat moment dat je moet leren voor een toets maar je hebt geen zin? Of je moet
-            huiswerk maken maar je weet niet waar je moet beginnen? Wij hebben de perfecte site voor
-            jou! In deze site kan je zelf een planning maken in de agenda. Hier kan je je eigen afspraken
-            inplannen, toetsen, wanneer je moet beginnen met een verslag of toets, en wat je maar kan
-            verzinnen. Heb je geen zin? Of stel je het leren uit? Maak dan gebruik van de motivatie
-            pagina. Hier kan je herinneringen instellen. Als je vragen hebt kan je die aan medeleerlingen
-            stellen in het forum. Wil je het perfecte verslag maken? Of een tien halen voor je toets? Kijk
-            dan even bij Tips & Templates. Daar hebben wij een aantal tips voor je en een voorbeeld
-            verslag.</p>
-    </div>
-  <Header>
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #fff;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #f2e76d;
+  color: white !important
+}
+
+h1 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bold;
+}
+
+.feb {
+color: #c2c0c0;
+}
+
+
 </style>
 </head>
 <body>
+<header>
+<div class="navbar">
 <ul>
-  <li><a id= "left" class="active" href="index.html">Home</a></li>
-  <li><a id= "left" href="Agenda.html">Agenda</a></li>
+  <li><a id= "left" href="index.html">Home</a></li>
+  <li><a id= "left" class="active" href="Agenda.html">Agenda</a></li>
   <li><a id= "left" href="Motivatie.html">Motivatie</a></li>
   <li><a id= "left" href="Forum.html">Forum</a></li>
   <li class="dropdown">
     <a id= "left" href="javascript:void(0)" class="dropbtn">Tips & Templates</a>
     <div class="dropdown-content">
-      <a href="Tips & Templates hw lr.html"> Tips </a>
-      <a href="Tips & Templates vs sv.html"> Templates </a>
+      <a href="Tips & templates hw lr.html"> Tips </a>
+      <a href="Tips & templates vs sv.html"> Templates </a>
   <li><a id="log" href="Inloggen.html">Inloggen</a>
+    </div>
+    </div>
     </div>
   </li>
 </ul>
+</header>
+</body>
+<br></br><br></br>
+<h1>Jouw agenda!</h1>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+<div class="month">      
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      Maart<br>
+      <span style="font-size:18px">2024</span>
+    </li>
+  </ul>
+</div>
 
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li><span class="feb">26</span></li>
+  <li><span class="feb">27</span></li>
+  <li><span class="feb">28</span></li>
+  <li><span class="feb">29</span></li>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li><span class="active">6</span></li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
 </body>
 </html>
-
-
